@@ -19,7 +19,7 @@ body {
 #nametab {
 	margin-left: 65px;
 }
-#TimerHour {
+#TimerHour, #HourTimer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
