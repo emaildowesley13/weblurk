@@ -150,6 +150,7 @@ function openG() {
     if (IntTh > '21:00:00' && '21:59:59' > IntTh) { tnt = 10; F4G() };
     if (IntTh > '22:00:00' && '22:59:59' > IntTh) { tnt = 10; F4G() };
     if (IntTh > '23:00:00' && '23:59:59' > IntTh) { tnt = 10; F4G() };
+    if (IntTh > '00:00:00' && '09:59:59' > IntTh) { tnt = 10; document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 10:00</span></li>'; };
 }
 function openL() {
     if (IntTh > '08:30:00' && '10:00:00' > IntTh) { tmt = 0; F4L() };
@@ -162,5 +163,6 @@ function openL() {
     if (IntTh > '19:00:00' && '20:30:00' > IntTh) { tmt = 7; F4L() };
     if (IntTh > '20:30:00' && '22:00:00' > IntTh) { tmt = 8; F4L() };
     if (IntTh > '22:00:00' && '23:30:00' > IntTh) { tmt = 9; F4L() };
-    if (IntTh > '23:30:00' && '02:30:00' > IntTh) { tmt = 10; F4L() };
+    if (IntTh > '23:30:00' && '02:00:00' > IntTh) { tmt = 10; F4L() };
+	if (IntTh > '02:00:01' && '08:29:59' > IntTh) { tnt = 10; document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 08:30</span></li>'; };
 }
