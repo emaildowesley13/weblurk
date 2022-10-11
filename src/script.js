@@ -106,14 +106,14 @@ function F4L() {
 
 function openWinG() {
 	nametabG = 'F4G';
-	W1nG = "top=50,height=360,width=960";
+	W1nG = "top=0,left=500,height=360,width=960";
 	nametabG = window.open("https://" + s4G, nametabG, W1nG);
 	result = s4G.replace("twitch.tv/", "");
 	document.getElementById('container2').innerHTML = '<li class="list-group2"><span class="badge2">Gods ' + result + '</span></li>';
 };
 function openWinL() {
 	nametabL = 'F4L';
-	W1nL = "top=50,left=500,height=360,width=960";
+	W1nL = "top=500,left=500,height=360,width=960";
 	nametabL = window.open("https://" + s4G, nametabL, W1nL);
 	result = s4G.replace("twitch.tv/", "");
 	document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy ' + result + '</span></li>';
