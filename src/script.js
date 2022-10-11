@@ -67,7 +67,7 @@ function liveonf() {
 				nametab = json[i].Streamer;
 				nametab2 = json[i].Streamer;
 				nametab3 = json[i].Streamer;
-				W1n = "top=" + i*10 + ",height=360,width=960";
+				W1n = "top=" + i*20 + ",height=360,width=960";
 				openWin();
 				function openWin() {
 					nametab = window.open("https://www.twitch.tv/" + json[i].Streamer, nametab, W1n);
@@ -78,7 +78,7 @@ function liveonf() {
 			if (json[i].Live === "TRUE" && json[i].Finalizada === "TRUE" || json[i].Live === "FALSE" && json[i].Finalizada === "TRUE") {
 				nametab = json[i].Streamer;
 				nametab2 = json[i].Streamer;
-				W1n = "top=" + i*10 + ",height=360,width=960";
+				W1n = "top=" + i*20 + ",height=360,width=960";
 				nametab = window.open("https://www.twitch.tv/" + json[i].Streamer, nametab, W1n);
 				closeWin();
 				function closeWin() {
