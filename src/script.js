@@ -8,7 +8,7 @@ setInterval(function(){
 	
 	switch (IntTh3) {
 		case '00:00': location.reload(); break;
-		case '50:00': /*case '40:00':*/ case '30:00': /*case '20:00':*/ case '10:00': Function4Viewer(); break;
+		case '50:00': case '40:00': case '30:00': case '20:00': case '10:00': Function4Viewer(); break;
 	}
 	switch (IntTh) {
 		case '10:00:00': tnt = 0; F4G(); break;
@@ -43,6 +43,7 @@ setInterval(function(){
 function Function4Viewer() {
 	date = new Date();
 	IntTh = date.toLocaleString('pt-BR', {hour: '2-digit', hour12: false, minute: '2-digit', second : '2-digit', timeZone: 'America/Sao_Paulo' });
+	IntTh2 = date.toLocaleString('pt-BR', {minute: '2-digit', timeZone: 'America/Sao_Paulo' });
 	let url4Coil = 'https://opensheet.elk.sh/1uUDTZycJjJQnBDbN7bnGMVXm1rcfmjWDGu7JsERWg6k/1';
     document.getElementById("HourTimer").innerHTML = IntTh;
 	fetch(url4Coil).then((response) => response.json()).then(json => {
@@ -55,9 +56,11 @@ function Function4Viewer() {
 			}
 		};
 	});
-	liveonf();
-	openG();
-	openL();
+	
+	switch (IntTh2) {
+		case '50': case '30': case '10': openG(); openL(); liveonf(); break;
+		case '40': case '20': liveonf(); break;
+	}
 };
 function liveonf() {
 	let url4Coil = 'https://opensheet.elk.sh/1uUDTZycJjJQnBDbN7bnGMVXm1rcfmjWDGu7JsERWg6k/1';
@@ -154,16 +157,16 @@ function openG() {
     if (IntTh > '00:00:00' && '09:59:59' > IntTh) { tnt = 10; document.getElementById('container2').innerHTML = '<li class="list-group2"><span class="badge2">Gods 10:00</span></li>'; };
 }
 function openL() {
-    if (IntTh > '08:30:00' && '10:00:00' > IntTh) { tmt = 0; F4L() };
-    if (IntTh > '10:00:00' && '11:30:00' > IntTh) { tmt = 1; F4L() };
-    if (IntTh > '11:30:00' && '13:00:00' > IntTh) { tmt = 2; F4L() };
-    if (IntTh > '13:00:00' && '14:30:00' > IntTh) { tmt = 3; F4L() };
-    if (IntTh > '14:30:00' && '16:00:00' > IntTh) { tmt = 4; F4L() };
-    if (IntTh > '16:00:00' && '17:30:00' > IntTh) { tmt = 5; F4L() };
-    if (IntTh > '17:30:00' && '19:00:00' > IntTh) { tmt = 6; F4L() };
-    if (IntTh > '19:00:00' && '20:30:00' > IntTh) { tmt = 7; F4L() };
-    if (IntTh > '20:30:00' && '22:00:00' > IntTh) { tmt = 8; F4L() };
-    if (IntTh > '22:00:00' && '23:30:00' > IntTh) { tmt = 9; F4L() };
-    if (IntTh > '23:30:00' && '02:00:00' > IntTh) { tmt = 10; F4L() };
-	if (IntTh > '02:00:01' && '08:29:59' > IntTh) { tnt = 10; document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 08:30</span></li>'; };
+    if (IntTh > '08:30:00' && '09:59:59' > IntTh) { tmt = 0; F4L() };
+    if (IntTh > '10:00:00' && '11:29:59' > IntTh) { tmt = 1; F4L() };
+    if (IntTh > '11:30:00' && '12:59:59' > IntTh) { tmt = 2; F4L() };
+    if (IntTh > '13:00:00' && '14:29:59' > IntTh) { tmt = 3; F4L() };
+    if (IntTh > '14:30:00' && '15:59:59' > IntTh) { tmt = 4; F4L() };
+    if (IntTh > '16:00:00' && '17:29:59' > IntTh) { tmt = 5; F4L() };
+    if (IntTh > '17:30:00' && '18:59:59' > IntTh) { tmt = 6; F4L() };
+    if (IntTh > '19:00:00' && '20:29:59' > IntTh) { tmt = 7; F4L() };
+    if (IntTh > '20:30:00' && '21:59:59' > IntTh) { tmt = 8; F4L() };
+    if (IntTh > '22:00:00' && '23:29:59' > IntTh) { tmt = 9; F4L() };
+    if (IntTh > '23:30:00' && '01:59:59' > IntTh) { tmt = 10; F4L() };
+	if (IntTh > '02:00:00' && '08:29:59' > IntTh) { tnt = 10; document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 08:30</span></li>'; };
 }
