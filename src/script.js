@@ -44,6 +44,7 @@ function Function4Viewer() {
 	date = new Date();
 	IntTh = date.toLocaleString('pt-BR', {hour: '2-digit', hour12: false, minute: '2-digit', second : '2-digit', timeZone: 'America/Sao_Paulo' });
 	let url4Coil = 'https://opensheet.elk.sh/1uUDTZycJjJQnBDbN7bnGMVXm1rcfmjWDGu7JsERWg6k/1';
+    document.getElementById("HourTimer").innerHTML = IntTh;
 	fetch(url4Coil).then((response) => response.json()).then(json => {
 		for(var i= 0, l = json.length; i< l; i++) {
 			if (document.getElementById("streamerDiv"+[i]) !== null){
