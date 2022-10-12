@@ -8,7 +8,8 @@ setInterval(function(){
 	
 	switch (IntTh3) {
 		case '00:00': location.reload(); break;
-		case '50:00': case '40:00': case '30:00': case '20:00': case '10:00': Function4Viewer(); break;
+		case '50:00': case '30:00': case '10:00': FoU = 'FssD'; Function4Viewer(); break;
+		case '40:00': case '20:00': FoU = 'FssU'; Function4Viewer(); break;
 	}
 	switch (IntTh) {
 		case '10:00:00': tnt = 0; F4G(); break;
@@ -56,10 +57,9 @@ function Function4Viewer() {
 			}
 		};
 	});
-	
-	switch (IntTh2) {
-		case '50': case '30': case '10': openG(); openL(); liveonf(); break;
-		case '40': case '20': liveonf(); break;
+	switch (FoU) {
+		case 'FssD': openG(); openL(); liveonf(); break;
+		case 'FssU': liveonf(); break;
 	}
 };
 function liveonf() {
