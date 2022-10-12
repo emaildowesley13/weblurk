@@ -8,8 +8,8 @@ setInterval(function(){
 	
 	switch (IntTh3) {
 		case '00:00': location.reload(); break;
-		case '50:00': case '30:00': case '10:00': FoU = 'FssD'; Function4Viewer(); break;
-		case '40:00': case '20:00': FoU = 'FssU'; Function4Viewer(); break;
+		case '50:00': case '30:00': case '10:00': Function4Viewer(); break;
+		case '40:00': case '20:00': Function4Viewer2(); break;
 	}
 	switch (IntTh) {
 		case '10:00:00': tnt = 0; F4G(); break;
@@ -57,10 +57,25 @@ function Function4Viewer() {
 			}
 		};
 	});
-	switch (FoU) {
-		case 'FssD': openG(); openL(); liveonf(); break;
-		case 'FssU': liveonf(); break;
-	}
+	openG(); openL(); liveonf();
+};
+function Function4Viewer2() {
+	date = new Date();
+	IntTh = date.toLocaleString('pt-BR', {hour: '2-digit', hour12: false, minute: '2-digit', second : '2-digit', timeZone: 'America/Sao_Paulo' });
+	IntTh2 = date.toLocaleString('pt-BR', {minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+	let url4Coil = 'https://opensheet.elk.sh/1uUDTZycJjJQnBDbN7bnGMVXm1rcfmjWDGu7JsERWg6k/1';
+    document.getElementById("HourTimer").innerHTML = IntTh;
+	fetch(url4Coil).then((response) => response.json()).then(json => {
+		for(var i= 0, l = json.length; i< l; i++) {
+			if (document.getElementById("streamerDiv"+[i]) !== null){
+			} else {
+				var new_div = document.createElement("div");
+				new_div.setAttribute("id", "streamerDiv"+[i]);
+				document.getElementById('container').appendChild(new_div);
+			}
+		};
+	});
+	liveonf();
 };
 function liveonf() {
 	let url4Coil = 'https://opensheet.elk.sh/1uUDTZycJjJQnBDbN7bnGMVXm1rcfmjWDGu7JsERWg6k/1';
