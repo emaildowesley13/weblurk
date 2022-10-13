@@ -138,6 +138,7 @@ function openWinL() {
 };
 function CloseWinG() {
 	nametabG = 'F4G';
+	W1nG = "top=0,left=500,height=360,width=960";
 	nametabG = window.open("https://www.twitch.tv/duckexza", nametabG, W1nG);
 	closeWin();
 	function closeWin() {
@@ -146,7 +147,8 @@ function CloseWinG() {
 	};
 };
 function CloseWinL() {
-	nametabL	= 'F4L';
+	nametabL = 'F4L';
+	W1nL = "top=500,left=500,height=360,width=960";
 	nametabL = window.open("https://www.twitch.tv/duckexza", nametabL, W1nL);
 	closeWin();
 	function closeWin() {
