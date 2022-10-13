@@ -142,7 +142,7 @@ function CloseWinG() {
 	closeWin();
 	function closeWin() {
 		nametabG.close();
-		document.getElementById('container2').innerHTML = '';
+		//document.getElementById('container2').innerHTML = '';
 	};
 };
 function CloseWinL() {
@@ -151,7 +151,7 @@ function CloseWinL() {
 	closeWin();
 	function closeWin() {
 		nametabL.close();
-		document.getElementById('container2').innerHTML = '';
+		//document.getElementById('container2').innerHTML = '';
 	};
 };
 function openG() {
@@ -166,10 +166,10 @@ function openG() {
     if (IntTh > '18:00:00' && '18:59:59' > IntTh) { tnt = 8; F4G() };
     if (IntTh > '19:00:00' && '19:59:59' > IntTh) { tnt = 9; F4G() };
     if (IntTh > '20:00:00' && '20:59:59' > IntTh) { tnt = 10; F4G() };
-    if (IntTh > '21:00:00' && '21:59:59' > IntTh) { tnt = 10; F4G() };
-    if (IntTh > '22:00:00' && '22:59:59' > IntTh) { tnt = 10; F4G() };
-    if (IntTh > '23:00:00' && '23:59:59' > IntTh) { tnt = 10; F4G() };
-    if (IntTh > '00:00:00' && '09:59:59' > IntTh) { tnt = 10; document.getElementById('container2').innerHTML = '<li class="list-group2"><span class="badge2">Gods 10:00</span></li>'; };
+    if (IntTh > '21:00:00' && '21:59:59' > IntTh) { tnt = 11; F4G() };
+    if (IntTh > '22:00:00' && '22:59:59' > IntTh) { tnt = 12; F4G() };
+    if (IntTh > '23:00:00' && '23:59:59' > IntTh) { tnt = 13; F4G() };
+    if (IntTh > '00:00:00' && '09:59:59' > IntTh) { CloseWinG(); document.getElementById('container2').innerHTML = '<li class="list-group2"><span class="badge2">Gods 10:00</span></li>'; };
 }
 function openL() {
     if (IntTh > '08:30:00' && '09:59:59' > IntTh) { tmt = 0; F4L() };
@@ -183,5 +183,5 @@ function openL() {
     if (IntTh > '20:30:00' && '21:59:59' > IntTh) { tmt = 8; F4L() };
     if (IntTh > '22:00:00' && '23:29:59' > IntTh) { tmt = 9; F4L() };
     if (IntTh > '23:30:00' && '01:59:59' > IntTh) { tmt = 10; F4L() };
-	if (IntTh > '02:00:00' && '08:29:59' > IntTh) { tnt = 10; document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 08:30</span></li>'; };
+	if (IntTh > '02:00:00' && '08:29:59' > IntTh) { CloseWinL(); document.getElementById('container3').innerHTML = '<li class="list-group2"><span class="badge2">Legacy 08:30</span></li>'; };
 }
